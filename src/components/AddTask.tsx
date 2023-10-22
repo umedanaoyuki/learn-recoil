@@ -1,9 +1,16 @@
+import {useRecoilValue} from "recoil";
+import {addTitleState} from "../states/addTitleState";
+
 export const AddTask = () => {
 
+    const addTitle = useRecoilValue(addTitleState);
+
+
     return <div className="taskField">
-        <div>5個のタスクがあります</div>
+        <div>{addTitle.length}個のタスクがあります</div>
         <ul>
-            <li>はじめてのタスク</li>
+            {addTitle.map((task) => (
+                <li key={task.id}>{task.title}</li>))}
         </ul>
     </div>
 };
