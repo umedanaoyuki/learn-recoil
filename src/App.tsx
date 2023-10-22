@@ -7,7 +7,6 @@ import {AddTask} from "./components/AddTask";
 function App() {
   return (
     <div className="App">
-      {/*<p>テスト</p>*/}
         <InputTask />
         <AddTask />
     </div>

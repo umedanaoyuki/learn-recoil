@@ -1,4 +1,9 @@
 export const AddTask = () => {
 
-    return (<p>Add Task</p>);
+    return <div className="taskField">
+        <div>5個のタスクがあります</div>
+        <ul>
+            <li>はじめてのタスク</li>
+        </ul>
+    </div>
 };
