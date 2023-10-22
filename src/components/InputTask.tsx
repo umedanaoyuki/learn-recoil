@@ -1,11 +1,13 @@
 import "./InputTask.css"
-import {useRecoilValue, useSetRecoilState} from "recoil";
+import {useRecoilState, useRecoilValue, useSetRecoilState} from "recoil";
 import {inputTitleState} from "../states/inputTitleState";
 import React, {useCallback} from "react";
 export const InputTask = () => {
 
-    const inputTitle = useRecoilValue(inputTitleState);
-    const setInputTitle = useSetRecoilState(inputTitleState);
+    // const inputTitle = useRecoilValue(inputTitleState);
+    // const setInputTitle = useSetRecoilState(inputTitleState);
+
+    const [inputTitle, setInputTitle] = useRecoilState(inputTitleState);
 
     const handleClick = () => {
         console.log("inputTitle");
